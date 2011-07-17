@@ -59,6 +59,9 @@ def main():
     # Log directory
     minstrel.LOG_DIR = os.path.join(minstrel.ROOT, 'logs');
     
+    # Template Dir
+    minstrel.TEMPLATES = os.path.join(minstrel.ROOT, 'www/interfaces/default')
+    
     # Arguments
     minstrel.ARGS = sys.argv[1:]
     
@@ -110,6 +113,8 @@ def main():
     # Config Object
     minstrel.CONFIG = ConfigObj(minstrel.CONFIG_FILE)
     
+    # Name our thread
+    threading.currentThread().name = "MAIN"
     
     # Actually start doing stuff now
     minstrel.init()
@@ -135,7 +140,8 @@ def main():
     
         
 
-
-    
 if __name__ == "__main__":
+    if sys.hexversion >= 0x020600F0:
+        # Sick-Beard does this for Windows EXE so we will too
+        freeze_support()
     main()
