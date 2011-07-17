@@ -1,0 +1,57 @@
+#import minstrel
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Minstrel - Alpha $minstrel.CURRENT_VERSION - $title</title>
+
+<!-- CSS -->
+<link href="$path/css/cupertino/jquery-ui-1.8.14.custom.css" rel="stylesheet" type="text/css" />
+<link href="$path/css/minstrel.css" rel="stylesheet" type="text/css" />
+<link href="$path/css/superfish.css" rel="stylesheet" type="text/css" />
+
+
+<!-- JavaScript -->
+<script src="$path/js/jquery-1.6.2.min.js" type="text/javascript"></script>
+<script src="$path/js/jquery-ui-1.8.14.custom.min.js" type="text/javascript"></script>
+<script src="$path/js/jquery.bgiframe.min.js" type="text/javascript"></script>
+<script src="$path/js/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+<script src="$path/js/superfish.js" type="text/javascript"></script>
+<script src="$path/js/supersubs.js" type="text/javascript"></script>
+<script src="$path/js/minstrel.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="header"> 
+	<a name="top"></a> 
+	<span id="logo"><a href="$path/home/" title="Minstrel Home"><img alt="Minstrel" src="$path/images/header_logo.png"  /></a></span> 
+	<span id="version-text">Alpha $minstrel.CURRENT_VERSION</span> 
+</div>
+
+<!-- Start Nav Menu -->
+<div id="nav-container">
+	<form id="search-menu" method="post" action="/search">
+    	Artist: <input type="text" name="q" />
+        <input type="submit" value=">" />
+    </form>
+	<ul id="main-menu" class="sf-menu"> 
+        <li class="current"> 
+            <a href="/home">Home</a> 
+        </li> 
+        <li> 
+            <a href="#">menu item</a> 
+        </li> 
+        <li> 
+            <a href="#">menu item</a> 
+        </li> 
+        <li> 
+            <a href="#">menu item</a> 
+        </li>	
+    </ul> 
+</div> 
+<!-- End Nav Menu -->
+<!-- Content Starts Here --> 
+<div id="content-container"> 
+	<div id="content"> 
+		<h1>$title</h1> 
+        <!-- Included Below -->
