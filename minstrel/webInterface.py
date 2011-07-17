@@ -26,7 +26,19 @@ import datetime
 import threading
 
 import minstrel
+
 from minstrel import logger
+
+import Cheetah
+from Cheetah.Template import Template
+
+class PageTemplate(Template):
+    def __init__(self, *args, **KWs):
+        KWs['file'] = os.path.join(minstrel.TEMPLATES, KWs['file'])
+        super(PageTemplate, self).__init__(*args, **KWs)
+
+def _sanitize(string):
+    return unicode(string).encode('utf-8', 'xmlcharrefreplace')
 
 class MinstrelInterface(object):
     @cherrypy.expose
@@ -35,11 +47,10 @@ class MinstrelInterface(object):
     
     @cherrypy.expose
     def home(self):
-        page = """
-        Welcome to Minstrel
-        """
+        page = PageTemplate(file="dashboard.tmpl")
         logger.info("Web hit /home")
-        return page
+        
+        return _sanitize(page)
     
     @cherrypy.expose
     def shutdown(self):
