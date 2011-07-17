@@ -27,6 +27,9 @@ from lib.configobj import ConfigObj
 
 from minstrel import logger
 
+# Version
+CURRENT_VERSION = "0.1"
+
 # Variables we will need
 MINSTREL_FULLNAME = None
 MINSTREL_NAME = None
@@ -40,6 +43,9 @@ DATA_DIR = None
 # Config Stuff
 CONFIG_FILE = None
 CONFIG = None
+
+# Templating stuff
+TEMPLATES = None
 
 # Database
 DATABASE_FILE = None
@@ -73,7 +79,7 @@ def init():
     
         global __INITIALIZED__, ROOT, DATA_DIR, CONFIG_FILE, CONFIG, DATABASE_FILE, ARGS, ARGS_COMPILED, \
             QUIET, DAEMON, MINSTREL_NAME, HTTP_PORT, HTTP_HOST, HTTP_USER, HTTP_PASS, HTTP_ROOT, \
-            LAUNCH_BROWSER, LOG_DIR
+            LAUNCH_BROWSER, LOG_DIR, TEMPLATES
     
         if __INITIALIZED__:
             return False
