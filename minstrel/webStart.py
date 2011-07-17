@@ -80,7 +80,7 @@ def initialize(options={}):
         cherrypy.process.servers.check_port(options['http_host'], options['http_port'])
         cherrypy.server.start()
     except IOError:
-        print 'Failed to start on port: %i. Is something else running?' % (options['http_port'])
+        logger.error("Could not bind to port {0} - Is Minstrel already running?".format(options['http_port']))
         sys.exit(0)
     
     cherrypy.server.wait()
