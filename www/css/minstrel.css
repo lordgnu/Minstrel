@@ -39,6 +39,8 @@ body {
 
 #content-container {
 	border-top: 1px solid #333;
+	background-color: #D6D6D6;
+	background-image: url(../images/content_bg.png);
 }
 
 #main-menu ul {
@@ -51,4 +53,41 @@ body {
 	font-weight: normal;
 	font-style: italic;
 	
+}
+
+#content {
+	background-color:#FFF;
+	margin-right: auto;
+	margin-left: auto;
+	min-width: 650px;
+	min-height: 480px;
+	width: 88%;
+	padding: 5px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #333;
+	border-right-color: #333;
+	border-bottom-color: #333;
+	border-left-color: #333;
+}
+
+#footer {
+	background-color: #CEDBD1;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #333;
+	border-right-color: #333;
+	border-bottom-color: #333;
+	border-left-color: #333;
+	padding: 5px;
+	text-align: center;
+	font-size: 12px;
 }
