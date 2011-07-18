@@ -2,3 +2,4 @@
 .project
 .pydevproject
 logs/*.log
+config.ini
