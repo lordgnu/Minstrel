@@ -36,16 +36,27 @@
     </form>
 	<ul id="main-menu" class="sf-menu"> 
         <li class="current"> 
-            <a href="/home">Home</a> 
+            <a href="/home">Dashboard</a> 
         </li> 
         <li> 
-            <a href="#">menu item</a> 
+            <a href="$path/history">History</a> 
         </li> 
         <li> 
-            <a href="#">menu item</a> 
+            <a href="$path/config">Config</a>
+            <ul>
+            	<li>
+            		<a href="$path/config/settings">Settings</a>
+            	</li>
+            	<li>
+            		<a href="$path/restart">Restart Minstrel</a>
+            	</li>
+            	<li>
+            		<a href="$path/shutdown">Shutdown Minstrel</a>
+            	</li>
+            </ul>
         </li> 
         <li> 
-            <a href="#">menu item</a> 
+            <a href="$path/logs">Logs and Errors</a> 
         </li>	
     </ul> 
 </div> 
